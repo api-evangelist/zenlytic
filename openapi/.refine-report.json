@@ -1,0 +1,14 @@
+{
+  "provider": "zenlytic",
+  "sources": [
+    "zenlytic-embedding-api-openapi.yml"
+  ],
+  "outputs": [
+    "zenlytic-embedding-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

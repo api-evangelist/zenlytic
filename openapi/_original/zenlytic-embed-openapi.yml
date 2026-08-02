@@ -1,0 +1,127 @@
+openapi: 3.1.0
+# generated: '2026-07-21'
+# method: generated
+# source: https://docs.zenlytic.com/embedding/signed_embedding
+# Faithful capture of the single publicly-documented Zenlytic REST operation
+# (the Signed Embedding endpoint). Every field below is documented at the
+# source URL; nothing is invented. Zenlytic does not publish its own OpenAPI.
+info:
+  title: Zenlytic Signed Embedding API
+  version: v1
+  description: >-
+    The Signed Embedding API returns a short-lived signed URL that renders
+    Zenlytic content (a dashboard, Explore, or the Zoë chat surface) inside a
+    host application for an external end user. Authenticated with Zenlytic
+    client credentials via HTTP Basic. This is the one publicly documented
+    Zenlytic REST endpoint; the broader product surface is the metrics-layer
+    Python library, iframe embedding, and MCP (client) connectors.
+  contact:
+    name: Zenlytic Support
+    url: https://support.zenlytic.com/
+  termsOfService: https://docs.zenlytic.com/legal-and-support/legal/terms-of-service-agreement
+externalDocs:
+  description: Signed Embedding documentation
+  url: https://docs.zenlytic.com/embedding/signed_embedding
+servers:
+  - url: https://api.zenlytic.com
+    description: Zenlytic production API
+tags:
+  - name: Embedding
+    description: Generate signed URLs for embedding Zenlytic content in host apps.
+paths:
+  /api/v1/embed/signed_url:
+    post:
+      operationId: createSignedEmbedUrl
+      summary: Create a signed embed URL
+      description: >-
+        Exchanges Zenlytic client credentials plus an external user identity for
+        a short-lived signed URL that renders the requested Zenlytic content for
+        that user. Row- and column-level access can be scoped via user_attributes.
+      tags:
+        - Embedding
+      security:
+        - basicAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignedUrlRequest'
+            example:
+              external_user_id: "237645tgfghe6"
+              target_url: "https://app.zenlytic.com/chat"
+      responses:
+        '200':
+          description: A signed embed URL was generated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SignedUrlResponse'
+              example:
+                signed_url: "https://app.zenlytic.com/embed/chat?userID=12345&userJWT=abc123"
+                expires_in: 86400
+        '401':
+          description: Missing or invalid client credentials.
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: >-
+        HTTP Basic with base64(client_id:client_secret). The client_id and
+        client_secret are provisioned by your Zenlytic representative.
+  schemas:
+    SignedUrlRequest:
+      type: object
+      required:
+        - external_user_id
+        - target_url
+      properties:
+        external_user_id:
+          type: string
+          description: Unique identifier for the end user in the host system.
+        target_url:
+          type: string
+          format: uri
+          description: The full Zenlytic URL to embed (dashboard, Explore, or chat).
+        user_attributes:
+          type: object
+          additionalProperties: true
+          description: User attributes driving row/column-level access grants.
+        extra_prompt_context:
+          type: string
+          description: Additional context passed to the Zoë AI assistant.
+        chat_header_message:
+          type: string
+          description: Custom chat header message.
+        chat_welcome_message:
+          type: string
+          description: Custom chat welcome message.
+        chat_initial_prompts:
+          type: array
+          items:
+            type: string
+          description: Suggested initial prompts shown in the chat surface.
+        first_name:
+          type: string
+          description: End-user first name for display.
+        last_name:
+          type: string
+          description: End-user last name for display.
+        role_name:
+          type: string
+          description: Embedded role for the user.
+          enum:
+            - embed
+            - embed_with_sql
+            - embedded_with_scheduling
+    SignedUrlResponse:
+      type: object
+      properties:
+        signed_url:
+          type: string
+          format: uri
+          description: The generated signed embedding URL.
+        expires_in:
+          type: integer
+          description: Lifetime of the signed URL in seconds.

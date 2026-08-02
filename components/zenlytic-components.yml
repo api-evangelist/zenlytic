@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.zenlytic.com/embedding/embedding_overview
+docs: https://docs.zenlytic.com/embedding/
+description: >-
+  Zenlytic ships an embedding surface that hosts its analytics UI (dashboards,
+  Explore, Zoë chat, and proactive agents) inside a host application via iframe.
+  Two modes are documented.
+families:
+  - name: Private Embedding
+    kind: iframe
+    detail: >-
+      Embeds Zenlytic for internal users who authenticate with their own
+      Zenlytic account inside the iframe.
+    docs: https://docs.zenlytic.com/embedding/private_embedding
+  - name: Signed Embedding
+    kind: iframe + signed-url
+    detail: >-
+      Embeds Zenlytic for external users. The host backend calls the Signed
+      Embedding API to mint a signed URL, then loads it in an iframe. Supports
+      row/column access grants, styling, and passing users into proactive agents.
+    docs: https://docs.zenlytic.com/embedding/signed_embedding
+    api: openapi/zenlytic-embed-openapi.yml#createSignedEmbedUrl
+surfaces:
+  - Dashboards
+  - Explore
+  - Zoë chat
+  - Proactive agents / workflows
+controls:
+  - Embedding styles (layout, navigation, theming)
+  - Permissions via user_attributes and access grants
+  - role_name scoping (embed, embed_with_sql, embedded_with_scheduling)

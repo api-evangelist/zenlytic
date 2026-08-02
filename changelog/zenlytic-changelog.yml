@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://news.zenlytic.com/
+scheme: dated
+versioning: none
+notes: >-
+  Zenlytic publishes a dated product "What's New" feed rather than a
+  version-numbered changelog. Recent window captured below; the live feed is
+  the source of truth.
+entries:
+  - date: '2026-07-08'
+    title: Context Manager in Chat
+    highlight: Edit business-logic context directly in chat for develop+ roles.
+  - date: '2026-06-30'
+    title: Governing Artifacts with Folders
+    highlight: Workspace folders add shared governance with Viewer/Editor/Owner access levels.
+  - date: '2026-06-17'
+    title: Scheduling Artifacts
+    highlight: Automated delivery of Artifacts to Slack or email on a schedule.
+  - date: '2026-06-11'
+    title: "With MCP, Zoë Can Now Close the Loop"
+    highlight: MCP connectors let Zoë read context from your stack and act in external systems.
+  - date: '2026-06-04'
+    title: Artifact Run History, Chat + Context Manager, MCP
+    highlight: Track scheduled deliveries; side-by-side Context Manager and chat.
+  - date: '2026-06-04'
+    title: Artifact Visual Editor
+    highlight: Fast visual editing for Artifacts.
+  - date: '2026-05-29'
+    title: Zoë Self Setup (Skills & Metrics)
+    highlight: Zoë autonomously creates reusable Skills and proposes new Metrics.

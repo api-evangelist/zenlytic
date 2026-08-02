@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/project/metrics-layer/
+packages:
+  - language: python
+    registry: pypi
+    name: metrics-layer
+    url: https://pypi.org/project/metrics-layer/
+    install: pip install metrics-layer
+    official: true
+    repo: https://github.com/Zenlytic/metrics_layer
+    license: Apache-2.0
+    description: >-
+      The open-source metrics layer maintained by Zenlytic. Provides a Python
+      client (MetricsLayerConnection) and SQL/MQL access to governed metrics
+      and dimensions across Snowflake, BigQuery, Redshift, Postgres, DuckDB,
+      Druid, and SQL Server. Warehouse-specific extras: metrics-layer[snowflake],
+      metrics-layer[bigquery], metrics-layer[redshift], metrics-layer[postgres].

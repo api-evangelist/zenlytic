@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.zenlytic.com/embedding/signed_embedding
+docs: https://docs.zenlytic.com/authentication-and-security/
+summary:
+  types: [http-basic, sso-saml-oidc, signed-jwt]
+  api_key_in: []
+  oauth2_flows: []
+  notes: >-
+    Zenlytic has three distinct authentication surfaces: (1) the Signed
+    Embedding REST endpoint authenticates with HTTP Basic over client
+    credentials; (2) end users sign in to the app via SSO (Microsoft Entra,
+    Okta) or credentials; (3) embedded external users are carried by a signed
+    JWT minted by the signed-URL endpoint.
+schemes:
+  - name: basicAuth
+    type: http
+    scheme: basic
+    used_by: Signed Embedding API (POST https://api.zenlytic.com/api/v1/embed/signed_url)
+    detail: base64(client_id:client_secret) in the Authorization header; client_id/client_secret provisioned by a Zenlytic representative.
+    sources: [openapi/zenlytic-embed-openapi.yml]
+  - name: sso
+    type: openIdConnect
+    detail: >-
+      Workspace login via SSO. Documented providers: Microsoft Entra ID and
+      Okta, with SSO-only enforcement, IP whitelisting, and custom JWT claim
+      mapping. See docs authentication-and-security section.
+    docs: https://docs.zenlytic.com/authentication-and-security/sso-custom-claims-reference
+    sources: [docs]
+  - name: signedEmbedJwt
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    detail: >-
+      Signed embed URLs carry a userJWT query parameter minted for the
+      external_user_id; row/column access is scoped by user_attributes and
+      role_name (embed | embed_with_sql | embedded_with_scheduling). Signed
+      URLs expire (expires_in seconds).
+    sources: [docs]
+  - name: warehouse-workload-identity
+    type: mutualTLS
+    detail: >-
+      Warehouse connections support Google Workload Identity Federation
+      (keyless BigQuery) and GitHub deploy keys for model repositories.
+    docs: https://docs.zenlytic.com/authentication-and-security/google_workload_identity_federation
+    sources: [docs]

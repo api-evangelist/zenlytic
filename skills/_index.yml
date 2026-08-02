@@ -1,0 +1,7 @@
+generated: '2026-07-21'
+method: generated
+skills:
+  - file: zenlytic-embed-external-user.md
+    name: Embed Zenlytic for an external user
+    api: openapi/zenlytic-embed-openapi.yml
+    operations: [createSignedEmbedUrl]

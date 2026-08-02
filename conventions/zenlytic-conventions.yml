@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/zenlytic-embed-openapi.yml
+docs: https://docs.zenlytic.com/embedding/signed_embedding
+description: >-
+  Cross-cutting semantics for the publicly documented Zenlytic REST surface
+  (Signed Embedding). Zenlytic exposes a single documented endpoint, so many
+  general conventions (pagination, bulk, idempotency keys) are not applicable /
+  not documented. Recorded honestly below.
+authentication:
+  style: http-basic
+  detail: base64(client_id:client_secret) in Authorization header.
+  ref: authentication/zenlytic-authentication.yml
+request:
+  content_type: application/json
+  base_url: https://api.zenlytic.com
+  versioning: uri-path (/api/v1/...)
+response:
+  content_type: application/json
+  signed_url_lifetime: expires_in (seconds); example 86400
+permission_model:
+  detail: >-
+    Row- and column-level access for embedded users is scoped by user_attributes
+    and role_name on the signed-URL request; not by OAuth scopes.
+  roles: [embed, embed_with_sql, embedded_with_scheduling]
+idempotency:
+  supported: false
+  note: No idempotency-key mechanism is documented.
+pagination:
+  supported: false
+  note: The documented endpoint returns a single object; no list pagination documented.
+error_envelope:
+  note: No structured error catalog is published; 401 returned for invalid credentials.

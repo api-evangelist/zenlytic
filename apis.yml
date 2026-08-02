@@ -1,9 +1,31 @@
 aid: zenlytic
 name: Zenlytic
-description: 'Zenlytic is a company surfaced as a portfolio company of bain-capital-ventures and added
-  to the API Evangelist network as a stub for enrichment. Sector: commerce. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Zenlytic is an AI-powered business intelligence platform built around Zoë, an
+  autonomous AI data analyst that turns natural-language questions into verified,
+  governed insights and business-ready artifacts (dashboards, decks, models, and
+  reports). It connects to cloud warehouses (Snowflake, BigQuery, Redshift,
+  Databricks, Azure Synapse), builds a semantic context layer from schemas and
+  query history, and answers with full lineage so every result is traceable to its
+  source tables, filters, and metrics. Developers integrate Zenlytic through its
+  open-source metrics-layer Python library, an iframe embedding surface with a
+  signed-URL REST endpoint for external users, SSO (Microsoft Entra, Okta), and
+  experimental MCP connectors that let Zoë call tools in the surrounding data stack.
+  Zenlytic is backed by Bain Capital Ventures.
 url: https://raw.githubusercontent.com/api-evangelist/zenlytic/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://zenlytic.com/assets/images/social-card.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,16 +34,81 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Commerce
-apis: []
+- Business Intelligence
+- Analytics
+- Artificial Intelligence
+- Data
+- Embedded Analytics
+- MCP
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: zenlytic:zenlytic-embedding-api
+  name: Zenlytic Embedding API
+  description: Generate signed URLs for embedding Zenlytic content in host apps.
+  humanURL: https://docs.zenlytic.com/embedding/signed_embedding
+  baseURL: https://api.zenlytic.com
+  tags:
+  - Embedding
+  properties:
+  - type: OpenAPI
+    url: openapi/zenlytic-embedding-api-openapi.yml
+  - type: APIReference
+    url: https://docs.zenlytic.com/embedding/signed_embedding
+  - type: Documentation
+    url: https://docs.zenlytic.com/embedding/
 common:
 - type: Website
   url: https://www.zenlytic.com/
+- type: DeveloperPortal
+  url: https://docs.zenlytic.com/
+- type: Documentation
+  url: https://docs.zenlytic.com/
+- type: APIReference
+  url: https://docs.zenlytic.com/embedding/signed_embedding
+- type: GettingStarted
+  url: https://docs.zenlytic.com/getting-started/start_here
+- type: Support
+  url: https://support.zenlytic.com/
+- type: Blog
+  url: https://zenlytic.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/Zenlytic
+- type: SignUp
+  url: https://app.zenlytic.com/signup
+- type: Login
+  url: https://app.zenlytic.com/login
+- type: PrivacyPolicy
+  url: https://zenlytic.com/privacy-policy
+- type: TermsOfService
+  url: https://docs.zenlytic.com/legal-and-support/legal/terms-of-service-agreement
+- type: ChangeLog
+  url: changelog/zenlytic-changelog.yml
+- type: LLMsTxt
+  url: llms/zenlytic-llms.txt
+- type: Packages
+  url: packages/zenlytic-packages.yml
+- type: SDKs
+  url: packages/zenlytic-packages.yml
+- type: Authentication
+  url: authentication/zenlytic-authentication.yml
+- type: DomainSecurity
+  url: security/zenlytic-domain-security.yml
+- type: Conventions
+  url: conventions/zenlytic-conventions.yml
+- type: Components
+  url: components/zenlytic-components.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1

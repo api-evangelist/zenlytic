@@ -1,0 +1,130 @@
+# Zenlytic Docs
+
+## Zenlytic Docs
+
+- [Zenlytic Documentation](https://docs.zenlytic.com/getting-started/intro.md): Browse the key docs paths for setup, modeling, analysis, administration, and advanced workflows.
+- [Start Here](https://docs.zenlytic.com/getting-started/start_here.md): Connect your warehouse, import tables, and ask your first Zoë question in a new workspace.
+- [How Zoë Works](https://docs.zenlytic.com/core-concepts/how-zoe-works.md): How Zoë answers data questions end to end — the agentic loop, the tools she uses, and how every query stays governed and auditable.
+- [Context Surfaces](https://docs.zenlytic.com/core-concepts/context-surfaces.md): Choose the right place for Zoë instructions based on when the context appears and how visible it is.
+- [Progressive Enrichment](https://docs.zenlytic.com/core-concepts/progressive-enrichment.md): Start with raw tables, then add the smallest modeling changes that fix real mistakes and improve Zoë over time.
+- [Fixing Zoë's Mistakes](https://docs.zenlytic.com/core-concepts/fixing-zoes-mistakes.md): Diagnose wrong answers by error type, then add the smallest context or modeling change that fixes the issue.
+- [How to Steer Zoë's Answers](https://docs.zenlytic.com/tips-and-tricks/zoe_context_ingestion.md): Quickly choose between prompts, skills, descriptions, synonyms, and searchable fields to guide Zoë.
+- [Naming Conventions](https://docs.zenlytic.com/tips-and-tricks/naming-conventions.md): Name measures and dimensions clearly so Zoë can distinguish similar fields and choose the right one.
+- [Descriptions and Synonyms](https://docs.zenlytic.com/tips-and-tricks/descriptions-and-synonyms.md): Use descriptions and synonyms to improve field discoverability and help Zoë pick the right fields.
+- [Entity Drills](https://docs.zenlytic.com/tips-and-tricks/entity-drills.md): Define drillable entities so Zoë can recognize key business objects and include the right detail fields.
+- [Time Metrics](https://docs.zenlytic.com/tips-and-tricks/time-metrics.md): Use \`default\_date\` and \`canon\_date\` so Zoë trends each metric against the correct time dimension.
+- [Voice Commands](https://docs.zenlytic.com/tips-and-tricks/voice-commands.md): Ask Zoë questions by voice with the microphone or the \`cmd + i\` keyboard shortcut.
+- [Data Indexing](https://docs.zenlytic.com/tips-and-tricks/data-indexing.md): Enable searchable dimensions so Zoë can index category values and apply the right filters.
+- [Plot Configuration](https://docs.zenlytic.com/tips-and-tricks/plot_configuration_tips_and_tricks_with_zoe.md): Configure charts with natural-language prompts for colors, axes, labels, series, and annotations.
+- [Zoë](https://docs.zenlytic.com/using-zenlytic/zoe.md): Ask questions in natural language, inspect queries and tool calls, and use Zoë to build charts, artifacts, and follow-up analysis.
+- [Clarity Engine](https://docs.zenlytic.com/using-zenlytic/clarity_engine.md): See how the Clarity Engine validates Zoë’s SQL, enforces governance, and turns ad hoc questions into secure, reusable analysis.
+- [AI Model Selection Guide](https://docs.zenlytic.com/using-zenlytic/ai-model-selection-guide.md): Choose the right Zoë model based on your data complexity, speed needs, and preference for autonomy versus transparency.
+- [Skills](https://docs.zenlytic.com/using-zenlytic/skills.md): Give Zoë persistent, on-demand instructions and reference material for complex workflows, style guides, and domain context.
+- [Attachments](https://docs.zenlytic.com/using-zenlytic/attachments.md): Attach files and live queries in chat so Zoë can analyze external data and use structured results as context.
+- [Web Search](https://docs.zenlytic.com/using-zenlytic/web-search.md): Enable Zoë to search the web for real-time context and cite external sources alongside your internal data.
+- [Patterns](https://docs.zenlytic.com/using-zenlytic/patterns.md): Index past analytical queries so Zoë can reuse proven SQL patterns when the semantic model alone is not enough.
+- [Artifacts](https://docs.zenlytic.com/using-zenlytic/artifacts.md): Create, organize, share, and refresh the artifacts Zoë builds across your conversations.
+- [Artifact Folders](https://docs.zenlytic.com/using-zenlytic/artifacts/artifact-folders.md): Organize shared artifacts into team folders and manage access through folder-level permissions.
+- [Artifact Folder Permissions](https://docs.zenlytic.com/using-zenlytic/artifacts/artifact-folder-permissions.md): Control who can view and manage foldered artifacts with shared access levels for users and groups.
+- [Installing Zenlytic in Microsoft Teams](https://docs.zenlytic.com/using-zenlytic/microsoft_teams_bot.md): Install the Zenlytic bot in Microsoft Teams so users can ask Zoë questions and explore data without leaving Teams.
+- [User Roles](https://docs.zenlytic.com/administration/user_roles.md): Compare roles, permissions, and ad-hoc SQL access so each user gets the right scope.
+- [User Attributes](https://docs.zenlytic.com/administration/user_attributes.md): Assign user attributes for access control, connection overrides, and default-deny security patterns.
+- [Workspace Groups And Permissions](https://docs.zenlytic.com/administration/workspace_groups_and_permissions.md): Create workspace groups and use them to manage dashboard sharing and access.
+- [Workspace Manager](https://docs.zenlytic.com/administration/workspace-manager.md): Manage workspaces across your organization, reuse connections, and control SSO provisioning from one place.
+- [Data Modeling Overview](https://docs.zenlytic.com/data-modeling/data_modeling.md): Learn how models, views, fields, and relationships work together to give Zoë reliable context.
+- [Ask Zoë for Data Model Recommendations](https://docs.zenlytic.com/data-modeling/asking-zoe-for-recommendations.md): Use Zoë to recommend, draft, and save the smallest modeling changes that improve answers.
+- [Context Manager](https://docs.zenlytic.com/data-modeling/context_manager.md): Manage model files, validate changes, compare branches, and deploy updates to production.
+- [Model](https://docs.zenlytic.com/data-modeling/model.md): Define warehouse connections, global settings, access grants, mappings, and relationships in a model file.
+- [Relationships](https://docs.zenlytic.com/data-modeling/relationships.md): Define non-obvious joins, cardinality, and join types so Zoë generates correct cross-table SQL.
+- [Views](https://docs.zenlytic.com/data-modeling/view.md): Define tables, default dates, descriptions, filters, and fields in reusable view files.
+- [Fields](https://docs.zenlytic.com/data-modeling/field.md): Understand the three field types that power dimensions, dimension groups, and measures.
+- [Dimensions](https://docs.zenlytic.com/data-modeling/dimension.md): Define reusable columns with labels, search behavior, access controls, and Zoë-specific guidance.
+- [Dimension Groups](https://docs.zenlytic.com/data-modeling/dimension_group.md): Create time and duration fields with reusable timeframes, intervals, and timezone behavior.
+- [Measures](https://docs.zenlytic.com/data-modeling/measure.md): Define metrics, valid aggregation patterns, filters, and non-additive logic for accurate analysis.
+- [Sets](https://docs.zenlytic.com/data-modeling/set.md): Group reusable fields into named sets so you can reference them consistently.
+- [Field Filters](https://docs.zenlytic.com/data-modeling/field_filter.md): Use filter syntax for fields and dashboards across strings, numbers, booleans, and dates.
+- [Formatting](https://docs.zenlytic.com/data-modeling/formatting.md): Format numbers, currencies, percentages, and images with supported value format names.
+- [Symmetric Aggregates](https://docs.zenlytic.com/data-modeling/symmetric_aggregates.md): Use distinct-key aggregates to avoid double counting when joins duplicate metric values.
+- [Table Calculation Syntax](https://docs.zenlytic.com/data-modeling/table_calculation_syntax.md): Reference supported table calculation functions and arithmetic for post-query analysis.
+- [Referenceable Attributes](https://docs.zenlytic.com/data-modeling/referenceable_attributes.md): Use user and query attributes inside SQL for dynamic filtering and query behavior.
+- [Access Grants](https://docs.zenlytic.com/data-modeling/access_grants.md): Apply user-attribute-based column and row access controls with access grants and access filters.
+- [dbt MetricFlow Integration](https://docs.zenlytic.com/data-modeling/dbt_metricflow.md): Connect dbt Semantic Layer projects to Zenlytic and extend them with Zenlytic metadata.
+- [Adding a New Table](https://docs.zenlytic.com/data-modeling/adding_a_new_table.md): Add a warehouse table or CSV, configure metadata, and attach it to your model.
+- [Cache Refresh](https://docs.zenlytic.com/data-modeling/cache-refresh.md): Force-refresh the model cache after direct git changes so Zoë uses the latest context.
+- [Migrating from Memories and Topics](https://docs.zenlytic.com/migrations/migrating-from-memories-and-topics.md): Move from legacy memories and topics to skills and relationships without breaking existing behavior.
+- [Proactive Getting Started](https://docs.zenlytic.com/proactive-agents/getting-started.md): Build reusable Zoë conversations, run them on demand, and share them across your workspace.
+- [Publish](https://docs.zenlytic.com/proactive-agents/publish.md): Publish proactive agents so teammates can discover, run, and re-use approved workflows.
+- [Schedule Delivery](https://docs.zenlytic.com/proactive-agents/schedule-delivery.md): Run proactive agents on a schedule and deliver the results to users automatically.
+- [Run History](https://docs.zenlytic.com/proactive-agents/run-history.md): Inspect past proactive agent runs, review outputs, and troubleshoot failures or unexpected results.
+- [Embedding Overview](https://docs.zenlytic.com/embedding/embedding_overview.md): Embed Zenlytic content with private or signed access, depending on your users and authentication model.
+- [Private Embedding](https://docs.zenlytic.com/embedding/private_embedding.md): Embed Zenlytic for internal users who authenticate with their own Zenlytic accounts inside the iframe.
+- [Signed Embedding](https://docs.zenlytic.com/embedding/signed_embedding.md): Generate signed embed URLs for external users and apply row and column access controls.
+- [Permissions in Embedding](https://docs.zenlytic.com/embedding/permissions_in_embedding.md): Control embedded access with user attributes, access grants, and signed URL permissions.
+- [Embedding Styles](https://docs.zenlytic.com/embedding/embedding_styles.md): Customize the embedded experience with layout, navigation, and style options that match your product.
+- [Proactive Agents in Embedding](https://docs.zenlytic.com/embedding/workflows_in_embedding.md): Run proactive agents inside embedded Zenlytic experiences and pass users into reusable workflows.
+- [MCP Overview (Experimental)](https://docs.zenlytic.com/mcp/overview.md): Connect Zoë to remote MCP servers so she can call external tools directly from chat.
+- [Tableau](https://docs.zenlytic.com/mcp/tableau.md): Connect Zoë to Tableau's MCP server to browse workbooks, data sources, and metadata from chat.
+- [Power BI](https://docs.zenlytic.com/mcp/powerbi.md): Connect Zoë to a Power BI MCP server to explore workspaces, datasets, and reports from chat.
+- [Google](https://docs.zenlytic.com/mcp/google.md): Connect Zoë to Google's BigQuery MCP server to inspect schemas and run SQL from chat.
+- [Looker](https://docs.zenlytic.com/mcp/looker.md): Connect Zoë to Looker's MCP server to query semantic models, dashboards, and metadata from chat.
+- [dbt](https://docs.zenlytic.com/mcp/dbt.md): Connect Zoë to dbt's MCP server to explore models, metrics, exposures, and lineage from chat.
+- [Atlan](https://docs.zenlytic.com/mcp/atlan.md): Connect Zoë to Atlan's MCP server to search data assets, glossaries, and lineage from chat.
+- [Snowflake](https://docs.zenlytic.com/mcp/snowflake.md): Connect Zoë to Snowflake's MCP server to query Cortex tools, SQL, and custom functions from chat.
+- [Reltio](https://docs.zenlytic.com/mcp/reltio.md): Connect Zoë to Reltio's MCP server to search entities, relationships, and AgentFlow tools from chat.
+- [Github](https://docs.zenlytic.com/mcp/github.md): Connect Zoë to GitHub's MCP server to browse repos, issues, pull requests, and Actions from chat.
+- [Jira](https://docs.zenlytic.com/mcp/jira.md): Connect Zoë to Jira's MCP server to search issues, run JQL, and work with Atlassian content.
+- [Integrations Overview](https://docs.zenlytic.com/data-sources/integrations.md): Compare supported warehouse connections and choose the right setup guide for your data source.
+- [Bigquery Setup](https://docs.zenlytic.com/data-sources/bigquery_setup.md): Create a BigQuery service account, connect it in Zenlytic, and verify warehouse access.
+- [Snowflake Setup](https://docs.zenlytic.com/data-sources/snowflake_setup.md): Connect Snowflake to Zenlytic with the right role, warehouse, database, and authentication settings.
+- [Redshift Setup](https://docs.zenlytic.com/data-sources/redshift_setup.md): Connect Amazon Redshift to Zenlytic, configure credentials, and test query access.
+- [Postgres Setup](https://docs.zenlytic.com/data-sources/postgres_setup.md): Connect PostgreSQL to Zenlytic, supply database credentials, and verify schema access.
+- [Mysql Setup](https://docs.zenlytic.com/data-sources/mysql_setup.md): Connect MySQL to Zenlytic, configure credentials, and confirm table access for modeling.
+- [Sql Server Setup](https://docs.zenlytic.com/data-sources/sql_server_setup.md): Connect SQL Server to Zenlytic, configure connection details, and validate warehouse access.
+- [Azure Synapse Setup](https://docs.zenlytic.com/data-sources/azure_synapse_setup.md): Connect Azure Synapse to Zenlytic, authenticate securely, and test query access.
+- [Databricks Setup](https://docs.zenlytic.com/data-sources/databricks_setup.md): Connect a Databricks SQL warehouse to Zenlytic and verify access to your catalogs and tables.
+- [Druid Setup](https://docs.zenlytic.com/data-sources/druid_setup.md): Connect Apache Druid to Zenlytic, configure the connection, and validate query access.
+- [Trino Onboarding](https://docs.zenlytic.com/data-sources/trino_onboarding.md): Connect Trino to Zenlytic, configure credentials, and confirm access to your catalogs and schemas.
+- [Motherduck Setup](https://docs.zenlytic.com/data-sources/motherduck_setup.md): Connect MotherDuck to Zenlytic, provide credentials, and verify access to DuckDB data.
+- [Microsoft Entra Zenlytic](https://docs.zenlytic.com/authentication-and-security/microsoft_entra_zenlytic.md): Set up Microsoft Entra SSO for Zenlytic and map the claims users need to sign in.
+- [Snowflake with Microsoft Entra](https://docs.zenlytic.com/authentication-and-security/microsoft_entra_snowflake.md): Configure Snowflake authentication with Microsoft Entra so Zenlytic users can sign in through SSO.
+- [Snowflake with Entra - What to Send](https://docs.zenlytic.com/authentication-and-security/microsoft_entra_snowflake/entra-snowflake-what-to-send.md): Send the required Snowflake and Entra details so Zenlytic can finish your SSO setup.
+- [Okta Zenlytic](https://docs.zenlytic.com/authentication-and-security/okta_zenlytic.md): Set up Okta SSO for Zenlytic and map the claims users need to authenticate correctly.
+- [Google Workload Identity Federation](https://docs.zenlytic.com/authentication-and-security/google_workload_identity_federation.md): Use workload identity federation to connect BigQuery without storing long-lived service account keys.
+- [Enforce SSO-Only Login](https://docs.zenlytic.com/authentication-and-security/enforce-sso-only.md): Restrict workspace login to SSO so users cannot authenticate with passwords or magic links.
+- [IP Whitelisting](https://docs.zenlytic.com/authentication-and-security/ip_whitelisting.md): Limit Zenlytic access by source IP to enforce network-level controls for your workspace.
+- [Login Troubleshooting](https://docs.zenlytic.com/authentication-and-security/login_troubleshooting.md): Diagnose common Zenlytic login failures across SSO, credentials, permissions, and workspace configuration.
+- [Connecting To Github With A Deploy Key](https://docs.zenlytic.com/authentication-and-security/connecting_to_github_with_a_deploy_key.md): Connect Zenlytic to GitHub with a deploy key so it can read your model repository.
+- [SSO Custom Claims Reference](https://docs.zenlytic.com/authentication-and-security/sso-custom-claims-reference.md): Detailed information on SSO JWT claims.
+- [Working with Zoë](https://docs.zenlytic.com/legacy/zoe_tips_and_tricks.md): Legacy overview page that points to the current guides for steering Zoë and fixing mistakes.
+- [Using Zenlytic (legacy)](https://docs.zenlytic.com/legacy/using_zenlytic.md): Get answers with Zoë, Explore your data directly, and use dashboards to revisit and investigate saved views.
+- [Exploring (legacy)](https://docs.zenlytic.com/legacy/exploring.md): Use Explore to slice, filter, and analyze governed metrics and dimensions without starting from a new question.
+- [Follow Ups (legacy)](https://docs.zenlytic.com/legacy/follow_ups.md): Drill deeper from charts and tables with follow-up actions like filtering, drilling by dimension, and drilling into detail.
+- [Dashboards (legacy)](https://docs.zenlytic.com/legacy/dashboard.md): Reference the legacy dashboard file format and related concepts still supported in existing projects.
+- [Follow Ups From a Dashboard](https://docs.zenlytic.com/legacy/dashboard/following_up_from_a_dashboard.md): Use legacy dashboard follow-ups to drill deeper from a saved visualization into new analysis.
+- [Dashboard Scheduled Delivery](https://docs.zenlytic.com/legacy/dashboard/dashboard-scheduled-delivery.md): Schedule legacy dashboards for recurring delivery to users by email or other supported channels.
+- [Topics (legacy)](https://docs.zenlytic.com/legacy/topic.md): Reference the legacy topic layer that organized business concepts before relationships and skills.
+- [Joins (legacy)](https://docs.zenlytic.com/legacy/join.md): Reference the legacy join file format previously used to define cross-view query behavior.
+- [Memories (legacy)](https://docs.zenlytic.com/legacy/memories.md): Reference the legacy memory system that stored reusable context before skills replaced it.
+- [Unsupported Chats](https://docs.zenlytic.com/legacy/legacy.md): Migrate older conversations into the latest supported format so you can continue analyzing with Zoë.
+- [Legal](https://docs.zenlytic.com/legal-and-support/legal.md): Access Zenlytic's legal agreements, data processing terms, and current subprocessors in one place.
+- [Terms of Service Agreement](https://docs.zenlytic.com/legal-and-support/legal/terms-of-service-agreement.md): Last Updated: February 26, 2026
+- [Data Processing Addendum](https://docs.zenlytic.com/legal-and-support/legal/data-processing-addendum.md): Last Updated: February 26, 2026
+- [Subprocessors](https://docs.zenlytic.com/legal-and-support/legal/subprocessors.md): Review the third-party subprocessors Zenlytic uses to deliver and support the product.
+- [Customer Support Policy](https://docs.zenlytic.com/legal-and-support/customer-support-policy.md): Learn about Zenlytic's support channels, including email support and AI agent assistance. Find self-service resources and understand what's included in technical support.
+- [License](https://docs.zenlytic.com/legal-and-support/license-doc.md): See Zenlytic's commercial licensing model and the open-source license for its metrics layer.
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.zenlytic.com/getting-started/intro.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
