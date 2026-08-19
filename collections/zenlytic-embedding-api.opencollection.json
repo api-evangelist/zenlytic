@@ -1,0 +1,38 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Zenlytic Signed Embedding API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Embedding",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a signed embed URL",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.zenlytic.com/api/v1/embed/signed_url",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Exchanges Zenlytic client credentials plus an external user identity for a short-lived signed URL that renders the requested Zenlytic content for that user. Row- and column-level access can be scoped via user_attributes."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

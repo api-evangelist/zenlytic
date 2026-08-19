@@ -1,0 +1,199 @@
+{
+  "item": [
+    {
+      "id": "4af5e563-7e23-4d3c-89bd-2defd63a3148",
+      "name": "Embedding",
+      "description": {
+        "content": "Generate signed URLs for embedding Zenlytic content in host apps.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "44abf002-898a-46b1-a82f-4fd647d277a4",
+          "name": "Create a signed embed URL",
+          "request": {
+            "name": "Create a signed embed URL",
+            "description": {
+              "content": "Exchanges Zenlytic client credentials plus an external user identity for a short-lived signed URL that renders the requested Zenlytic content for that user. Row- and column-level access can be scoped via user_attributes.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "embed",
+                "signed_url"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"external_user_id\": \"<string>\",\n  \"target_url\": \"<uri>\",\n  \"user_attributes\": {\n    \"key_0\": 4010.118833694952\n  },\n  \"extra_prompt_context\": \"<string>\",\n  \"chat_header_message\": \"<string>\",\n  \"chat_welcome_message\": \"<string>\",\n  \"chat_initial_prompts\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"role_name\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "518fc655-fefa-43fb-b1df-32524633feee",
+              "name": "A signed embed URL was generated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "embed",
+                    "signed_url"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"external_user_id\": \"237645tgfghe6\",\n  \"target_url\": \"https://app.zenlytic.com/chat\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"signed_url\": \"https://app.zenlytic.com/embed/chat?userID=12345&userJWT=abc123\",\n  \"expires_in\": 86400\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d5f6bbd4-80e0-4c0a-ae3c-835ebf34054b",
+              "name": "Missing or invalid client credentials.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "embed",
+                    "signed_url"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"external_user_id\": \"237645tgfghe6\",\n  \"target_url\": \"https://app.zenlytic.com/chat\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.zenlytic.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "81e5ecf9-3769-4c84-b37d-942f79a181d2",
+    "name": "Zenlytic Signed Embedding API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Signed Embedding API returns a short-lived signed URL that renders Zenlytic content (a dashboard, Explore, or the Zoë chat surface) inside a host application for an external end user. Authenticated with Zenlytic client credentials via HTTP Basic. This is the one publicly documented Zenlytic REST endpoint; the broader product surface is the metrics-layer Python library, iframe embedding, and MCP (client) connectors.\n\nContact Support:\n Name: Zenlytic Support",
+      "type": "text/plain"
+    }
+  }
+}
