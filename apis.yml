@@ -69,6 +69,8 @@ apis:
   humanURL: https://docs.zenlytic.com/embedding/signed_embedding
   baseURL: https://api.zenlytic.com
   tags:
+  - Embeddings
+  tags_raw:
   - Embedding
   properties:
   - type: OpenAPI
