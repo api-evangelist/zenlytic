@@ -46,16 +46,6 @@ paths:
           description: Missing or invalid client credentials.
 components:
   schemas:
-    SignedUrlResponse:
-      type: object
-      properties:
-        signed_url:
-          type: string
-          format: uri
-          description: The generated signed embedding URL.
-        expires_in:
-          type: integer
-          description: Lifetime of the signed URL in seconds.
     SignedUrlRequest:
       type: object
       required:
@@ -100,6 +90,16 @@ components:
           - embed
           - embed_with_sql
           - embedded_with_scheduling
+    SignedUrlResponse:
+      type: object
+      properties:
+        signed_url:
+          type: string
+          format: uri
+          description: The generated signed embedding URL.
+        expires_in:
+          type: integer
+          description: Lifetime of the signed URL in seconds.
   securitySchemes:
     basicAuth:
       type: http
